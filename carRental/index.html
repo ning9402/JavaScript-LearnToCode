@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>ACME Car Rental</title>
+    <script src="/js/index.js"></script>
+</head>
+
+<body>
+    <h1>ACME Car Rental</h1>
+
+    <p>
+        <label for="pickupdate">Pickup date: </label>
+        <input type="date" id="pickupDate">
+    </p>
+
+    <p>
+        <label for="numberOfDays">Number of Days: </label>
+        <input type="number" id="numberOfDays">
+    </p>
+
+    <p>
+        Options
+        <br><br>
+        <input type="checkbox" id="tollTag">
+        <label for="tollTag">Electronic Toll Tag ($3.95/day)</label>
+        <br>
+        <input type="checkbox" id="gps">
+        <label for="gps">GPS ($2.95/day)</label>
+        <br>
+        <input type="checkbox" id="roadsideAssistance">
+        <label for="roadsideAssistance">Roadside Assistance ($2.95/day)</label>
+    </p>
+
+    <p>
+        Under 25
+        <br><br>
+        <input type="radio" name="under25" id="noUnder25" checked>
+        <label for="noUnder25">No</label>
+        &nbsp;
+        <input type="radio" name="under25" id="yesUnder25">
+        <label for="yesUnder25">Yes</label>
+    </p>
+
+    <p>
+        <input type="button" value="Esimate Total Cost" id="totalCostBtn">
+    </p>
+    <p id="car">Car rental: </p>
+    <p id="options">Options: </p>
+    <p id="underSurcharge">Under 25 surcharge: </p>
+    <br>
+    <p id="cost">Total due: </p>
+
+</body>
+
+</html>
