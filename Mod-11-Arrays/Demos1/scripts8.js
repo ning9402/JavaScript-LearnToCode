@@ -1,5 +1,4 @@
 "use strict";
-
 let menu = [
     {
         id: 1,
@@ -75,30 +74,34 @@ let menu = [
     }
 ];
 
-
+// USE ES6 find() function to show price of item
+// Note: find() stops at the FIRST one that matches so it should
+//       be used in appropriate "exact match" searches
 let itemToSearchFor = "Coke";
-let catToSearchFor = "Meal";
-// search for the item.  if we carry it, displ;ay the price.
-// if we don't carry it, tell the user that we don't carry it
-/*
-for (let i = 0; i < menu.length; i++) {
-    if (menu[i].item == itemToSearchFor) {
-        console.log("The price of " + itemToSearchFor + " is $" + menu[i].price);
-        break;
-    }
-}
-*/
 
-/*for (let i = 0; i < menu.length; i++) {
-    if (menu[i].item .indexOf(itemToSearchFor) >= 0) {
-        console.log("The price of " + menu[i].item + " is $" + menu[i].price);
-    }
+let menuItem = menu.find(m => m.item == itemToSearchFor);
+if (menuItem != null){
+    console.log(menuItem.item + " $" + menuItem.price);
 }
-*/
-for (let i = 0; i < menu.length; i++) {
-    if (menu[i].category.indexOf(catToSearchFor) >= 0) {
-        console.log("The price of " + menu[i].item + " is $" + menu[i].price);
-    }
+else {
+    console.log(itemToSearchFor + " was not found.");
 }
 
+let selectedElement = menu.find(arrayElement => arrayElement.id == 4);
+if(selectedElement != null){
+    console.log(selectedElement.item + " $" + selectedElement.price);
+}
+else {
+    console.log("Item was not found");
+}
+
+
+
+// USE ES6 filter() function to show all items in a specific category
+// Note: filter() returns ALL elements that match so it should
+//       be used when you expect the possibility of many matches
+let categoryToSearchFor = "Drink";
+
+
+// USE ES6 filter() function to show all items cost <= some max price
 let maxPrice = 8.00;
